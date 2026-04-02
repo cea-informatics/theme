@@ -44,10 +44,10 @@ jobs:
             - name: Create ZIP archive
               id: zip
               run: |
-                  zip_name="blocksy.zip"
-                  mkdir -p build/blocksy
-                  rsync -a --exclude='.git' --exclude='.github' --exclude='build' . build/blocksy/
-                  (cd build && zip -r "../$zip_name" blocksy)
+                  zip_name="foxtown.zip"
+                  mkdir -p build/foxtown
+                  rsync -a --exclude='.git' --exclude='.github' --exclude='build' . build/foxtown/
+                  (cd build && zip -r "../$zip_name" foxtown)
                   echo "zip_path=$zip_name" >> $GITHUB_OUTPUT
 
             - name: Upload artifact
